@@ -1,0 +1,24 @@
+---
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets: 
+rule_files: 
+scrape_configs:
+- job_name: prometheus
+  static_configs:
+  - targets:
+    - graoully-11.nancy.grid5000.fr:9100
+    - graoully-12.nancy.grid5000.fr:9100
+    - graoully-13.nancy.grid5000.fr:9100
+    - graoully-14.nancy.grid5000.fr:9100
+    - graoully-15.nancy.grid5000.fr:9100
+    - graoully-16.nancy.grid5000.fr:9100
+    - graoully-5.nancy.grid5000.fr:9100
+    - graoully-6.nancy.grid5000.fr:9100
+    - graoully-7.nancy.grid5000.fr:9100
+    - graoully-8.nancy.grid5000.fr:9100
+    - graoully-9.nancy.grid5000.fr:9100

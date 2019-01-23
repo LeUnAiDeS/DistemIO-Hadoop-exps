@@ -1,0 +1,34 @@
+../testFile: (g=0): rw=write, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=mmap, iodepth=1
+fio-3.12
+Starting 1 process
+../testFile: Laying out IO file (1 file / 256MiB)
+
+../testFile: (groupid=0, jobs=1): err= 0: pid=14660: Tue Jan 22 20:22:07 2019
+  write: IOPS=2163, BW=8654KiB/s (8862kB/s)(256MiB/30291msec); 0 zone resets
+    clat (nsec): min=1366, max=203997k, avg=461772.34, stdev=5664029.64
+     lat (nsec): min=1407, max=203997k, avg=461841.67, stdev=5664065.03
+    clat percentiles (nsec):
+     |  1.00th=[     1384],  5.00th=[     1400], 10.00th=[     1400],
+     | 20.00th=[     1416], 30.00th=[     1432], 40.00th=[     1448],
+     | 50.00th=[     1496], 60.00th=[     2024], 70.00th=[     2096],
+     | 80.00th=[     2320], 90.00th=[     3408], 95.00th=[     5984],
+     | 99.00th=[  7962624], 99.50th=[ 32112640], 99.90th=[ 92798976],
+     | 99.95th=[115867648], 99.99th=[204472320]
+   bw (  KiB/s): min=   16, max=65536, per=94.17%, avg=8149.27, stdev=20701.75, samples=60
+   iops        : min=    4, max=16384, avg=2037.28, stdev=5175.45, samples=60
+  lat (usec)   : 2=57.20%, 4=36.10%, 10=2.52%, 20=0.24%, 50=0.56%
+  lat (usec)   : 100=0.34%, 250=0.96%, 500=0.06%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=1.38%, 20=0.01%, 50=0.39%
+  lat (msec)   : 100=0.14%, 250=0.06%
+  cpu          : usr=0.28%, sys=0.52%, ctx=2236, majf=1, minf=65546
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,65536,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: bw=8654KiB/s (8862kB/s), 8654KiB/s-8654KiB/s (8862kB/s-8862kB/s), io=256MiB (268MB), run=30291-30291msec
+
+Disk stats (read/write):
+  sda: ios=1039/822, merge=0/8, ticks=344/21148, in_queue=21492, util=1.19%

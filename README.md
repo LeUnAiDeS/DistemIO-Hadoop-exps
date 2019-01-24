@@ -2,7 +2,13 @@
 This repository concerns the experimets performed to highligh the storage emulation service of the Distem emulator. 
 It includes the necessary scripts for reproducing these experiments which are done on Hadoop framework. It also includes the results described in the Distem's storage emulation paper.
 
-## Experiments repoducibility
+## Validation Expierments
+
+
+
+# Hadoop Experimemnts
+
+### Experiments repoducibility
 To reproduce these experiments, you should install the Distem emulator (http://distem.gforge.inria.fr/) on your infrastructure. It is noticable that Distem can be on several testbeds including Grid'5000, CloudLab, and Chameleon. 
 
 If reproducing on a tesbted, you should firstly reserve yor machines. For example, the following code reserves 30 machine on the Grid'5000 for two hours starting from 2019-01-18 16:00:00
@@ -30,7 +36,7 @@ A new directory called results will be created. It will contain the results of a
 
 
 
-## Experiment results
+### Experiment results
 The results folder contain several results used in the experiment section in the described paper. It also contails two scripts that serve to prepare exploitable results (CloneDataFromFiles.rb) and an R script to generate the figures (analysePerf.R). To regenrate the figures from the existing results. You should execute these commands from inside the results directory
 
 ```

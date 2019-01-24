@@ -30,13 +30,10 @@ echo $MEM > $MNT_PATH/$CG_NAME/memory.high
 
 echo -e "mPerfom Fio tests..."
 
-
-limits=(524288 1048576 67108864 134217728 268435456 536870912 1073741824)
+limits=(33554432 67108864 134217728 536870912 1073741824 524288 1048576)
+engines=(sync mmap psync pvsync pvsync2 posixaio)
 filesizes=(1M 10M 256M 1024M 2048M)
-#engines=(sync mmap psync pvsync pvsync2 posixaio)
-engines=(sync mmap)
-#patterns=(read write randread randwrite readwrite randrw)
-patterns=(read write)
+patterns=(read write randread randwrite readwrite randrw)
 
 
 for limit in "${limits[@]}"; do

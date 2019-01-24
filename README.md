@@ -1,6 +1,5 @@
 # Preambule
-This repository concerns the experimets performed to highligh the storage emulation service of the Distem emulator. 
-It includes the necessary scripts for reproducing these experiments which are done on Hadoop framework. It also includes the results described in the Distem's storage emulation paper.
+This repository includes the validation experiments (scripts and results) of adding the I/O limitation service into the Distem emulator. It also includes the results and necessary scripts for reproducing the Hadoop experiments described in the DistemIO paper.
 
 ## Validation Expierments
 

@@ -54,7 +54,7 @@ tp1<- ggplot(data = dir_sync_hdd, aes(x= factor(limitation, levels=c("512 KB/s",
 
 
 dir_sync_ssd <- subset (datassd, IOengine=="sync" & syscall=="read" & type =="direct" & filesize!="1 MB" , select=IOengine:percentageIdeal)
-tp2<-ggplot(data= dir_sync_ssd, aes(x= factor(limitation, levels=c("512 KB/s", "1 MB/s", "64 MB/s", "128 MB/s", "256 MB/s", "512 MB/s", "1 GB/s")), y = percentage, group = filesize))+ geom_line(aes(colour= factor(filesize, levels=c("1 MB", "10 MB", "256 MB", "1 GB", "2 GB")))) + geom_point(aes(colour= factor(filesize, levels=c("1 MB", "10 MB", "256 MB", "1 GB", "2 GB")))) +  ylim(0,130) + geom_hline(yintercept=100) + geom_hline(yintercept=130, color="gray", lty=2) +labs(title= "B) SSD", x = "I/O Limitations ", y ="Precision (%)", color = "File size") + theme(text = element_text(size = 10), strip.text = element_text(size=10), axis.text= element_text(size=9), axis.title.x = element_text(size= 12), axis.title.y = element_text(size= 12))
+tp2<-ggplot(data= dir_sync_ssd, aes(x= factor(limitation, levels=c("512 KB/s", "1 MB/s", "64 MB/s", "128 MB/s", "256 MB/s", "512 MB/s", "1 GB/s")), y = percentage, group = filesize))+ geom_line(aes(colour= factor(filesize, levels=c("1 MB", "10 MB", "256 MB", "1 GB", "2 GB")))) + geom_point(aes(colour= factor(filesize, levels=c("1 MB", "10 MB", "256 MB", "1 GB", "2 GB")))) +  ylim(0,130) + geom_hline(yintercept=100) + geom_hline(yintercept=130, color="gray", lty=2) +labs(title= "B) SSD_sync_read_direct", x = "I/O Limitations ", y ="Precision (%)", color = "File size") + theme(text = element_text(size = 10), strip.text = element_text(size=10), axis.text= element_text(size=9), axis.title.x = element_text(size= 12), axis.title.y = element_text(size= 12))
 
 plot_grid(tp1, tp2, ncol=1)
 
@@ -69,7 +69,7 @@ tp1<- ggplot(data = dir_sync_hdd_w, aes(x= factor(limitation, levels=c("512 KB/s
 
 
 dir_sync_ssd_w <- subset (datassd, IOengine=="sync" & syscall=="write" & type =="direct" & filesize!="1 MB" , select=IOengine:percentageIdeal)
-tp2<-ggplot(data= dir_sync_ssd_w, aes(x= factor(limitation, levels=c("512 KB/s", "1 MB/s", "64 MB/s", "128 MB/s", "256 MB/s", "512 MB/s", "1 GB/s")), y = percentage, group = filesize))+ geom_line(aes(colour= factor(filesize, levels=c("1 MB", "10 MB", "256 MB", "1 GB", "2 GB")))) + geom_point(aes(colour= factor(filesize, levels=c("1 MB", "10 MB", "256 MB", "1 GB", "2 GB")))) +  ylim(0,130) + geom_hline(yintercept=100) + geom_hline(yintercept=130, color="gray", lty=2) +labs(title= "B) SSD", x = "I/O Limitations ", y ="Precision (%)", color = "File size") + theme(text = element_text(size = 10), strip.text = element_text(size=10), axis.text= element_text(size=9), axis.title.x = element_text(size= 12), axis.title.y = element_text(size= 12))
+tp2<-ggplot(data= dir_sync_ssd_w, aes(x= factor(limitation, levels=c("512 KB/s", "1 MB/s", "64 MB/s", "128 MB/s", "256 MB/s", "512 MB/s", "1 GB/s")), y = percentage, group = filesize))+ geom_line(aes(colour= factor(filesize, levels=c("1 MB", "10 MB", "256 MB", "1 GB", "2 GB")))) + geom_point(aes(colour= factor(filesize, levels=c("1 MB", "10 MB", "256 MB", "1 GB", "2 GB")))) +  ylim(0,130) + geom_hline(yintercept=100) + geom_hline(yintercept=130, color="gray", lty=2) +labs(title= "B) SSD_sync_write_direct", x = "I/O Limitations ", y ="Precision (%)", color = "File size") + theme(text = element_text(size = 10), strip.text = element_text(size=10), axis.text= element_text(size=9), axis.title.x = element_text(size= 12), axis.title.y = element_text(size= 12))
 
 plot_grid(tp1, tp2, ncol=1)
 
@@ -118,7 +118,7 @@ tp1<- ggplot(data = dir_sync_hdd_w, aes(x= factor(limitation, levels=c("512 KB/s
 
 
 dir_sync_ssd_w <- subset (datassd, IOengine=="mmap" & syscall=="write" & type =="direct" & filesize!="1 MB" , select=IOengine:percentageIdeal)
-tp2<-ggplot(data= dir_sync_ssd_w, aes(x= factor(limitation, levels=c("512 KB/s", "1 MB/s", "64 MB/s", "128 MB/s", "256 MB/s", "512 MB/s", "1 GB/s")), y = percentage, group = filesize))+ geom_line(aes(colour= factor(filesize, levels=c("1 MB", "10 MB", "256 MB", "1 GB", "2 GB")))) + geom_point(aes(colour= factor(filesize, levels=c("1 MB", "10 MB", "256 MB", "1 GB", "2 GB")))) +  ylim(0,130) + geom_hline(yintercept=100) + geom_hline(yintercept=130, color="gray", lty=2) +labs(title= "B) SSD", x = "I/O Limitations ", y ="Precision (%)", color = "File size") + theme(text = element_text(size = 10), strip.text = element_text(size=10), axis.text= element_text(size=9), axis.title.x = element_text(size= 12), axis.title.y = element_text(size= 12))
+tp2<-ggplot(data= dir_sync_ssd_w, aes(x= factor(limitation, levels=c("512 KB/s", "1 MB/s", "64 MB/s", "128 MB/s", "256 MB/s", "512 MB/s", "1 GB/s")), y = percentage, group = filesize))+ geom_line(aes(colour= factor(filesize, levels=c("1 MB", "10 MB", "256 MB", "1 GB", "2 GB")))) + geom_point(aes(colour= factor(filesize, levels=c("1 MB", "10 MB", "256 MB", "1 GB", "2 GB")))) +  ylim(0,130) + geom_hline(yintercept=100) + geom_hline(yintercept=130, color="gray", lty=2) +labs(title= "B) SSD _mmap_write_direct", x = "I/O Limitations ", y ="Precision (%)", color = "File size") + theme(text = element_text(size = 10), strip.text = element_text(size=10), axis.text= element_text(size=9), axis.title.x = element_text(size= 12), axis.title.y = element_text(size= 12))
 
 plot_grid(tp1, tp2, ncol=1)
 

@@ -33,9 +33,8 @@ echo -e "Perfom Fio tests.."
 
 
 filesizes=(1M 10M 100M 1024M)
-limits=(524288 1048576 33554432 67108864 134217728 536870912 1073741824)
-#engines=(sync mmap psync pvsync pvsync2 posixaio)
-engines=(sync mmap)
+limits=(33554432 67108864 134217728 536870912 1073741824 524288 1048576)
+engines=(sync mmap psync pvsync pvsync2 posixaio)
 #patterns=(read write randread randwrite readwrite randrw)
 patterns=(read write)
 

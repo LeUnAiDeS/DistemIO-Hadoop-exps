@@ -2,7 +2,9 @@
 This repository includes the validation experiments (scripts and results) of adding the I/O limitation service into the Distem emulator. It also includes the results and necessary scripts for reproducing the Hadoop experiments described in the DistemIO paper.
 
 ## Validation Expierments
+You can find the scripts and the results of the validation experiments in the ValidatioExps folder. The experiments are performed on Debian9 using the Fio benchmark (v3.12). To reproduce, for example, the experiments of cgroupV2, you should use one of the following scripts: CGV2_HDD_mem128.sh CGV2_SSD_mem1G.sh (both are in validationExps/cgroupV2/scripts). Both scripts can be used for testing either HDDs or SSDs, their difference is just in the applied limits and the sizes of tested files (tunned regarding the performance of the tested devices). 
 
+A set of collected results as well as a parser script can be found in the results validationExps/cgroupV2/results. However, 
 
 
 ## Hadoop Experimemnts

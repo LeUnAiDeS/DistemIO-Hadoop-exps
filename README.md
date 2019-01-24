@@ -17,7 +17,7 @@ $ oarsub -t deploy -l slash_22=1+{"cluster='parasilo' and type='disk' or type='d
 
 ```
 
-Then, you should pull that repository and gets into the scripts folder. You should enusre that the terminal is connected to the job that your reserved. This could be done on the Grid'5000 testbed by execution this command: 
+Then, you should pull that repository and gets into the scripts folder (HadoopExps/scripts). You should enusre that the terminal is connected to the job that your reserved. This could be done on the Grid'5000 testbed by execution this command: 
 
 ```
 $ oarsub -C JOB_NUMBER

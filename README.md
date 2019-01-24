@@ -11,7 +11,7 @@ DistemIOEmulation$ cd validationExps/cgroupV2/analyse
 Rscript analyse.R 
 ```
 
-Beside that, we prepared some figures that analyze several experiments in the following [file](validationExps/cgroupV2/sync_mmap.pdf).
+Beside that, we prepared some figures that analyze several experiments in the following [file](validationExps/cgroupV2/someResults.pdf).
 
 
 

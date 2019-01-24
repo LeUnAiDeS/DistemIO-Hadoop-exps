@@ -4,7 +4,16 @@ This repository includes the validation experiments (scripts and results) of add
 ## Validation Expierments
 You can find the scripts and the results of the validation experiments in the ValidatioExps folder. The experiments are performed on Debian9 using the Fio benchmark (v3.12). To reproduce, for example, the experiments of cgroupV2, you should use one of the following scripts: CGV2_HDD_mem128.sh CGV2_SSD_mem1G.sh (both are in validationExps/cgroupV2/scripts). Both scripts can be used for testing either HDDs or SSDs, their difference is just in the applied limits and the sizes of tested files (tunned regarding the performance of the tested devices). 
 
-A set of collected results as well as a parser script can be found in the results validationExps/cgroupV2/results. However, 
+A set of collected results can be found can be found in the results validationExps/cgroupV2/results. However, you can directly refer to the net results found in the validationExps/cgroupV2/analyse folder. You have also the possiblity to re-analyse and generate new figures using the included R scrip as follows: 
+
+```
+DistemIOEmulation$ cd validationExps/cgroupV2/analyse
+Rscript analyse.R 
+```
+
+Beside that, we prepared some figures that analyze several experiments in the following [file](validationExps/cgroupV2/sync_mmap).
+
+
 
 
 ## Hadoop Experimemnts

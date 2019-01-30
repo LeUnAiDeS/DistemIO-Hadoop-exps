@@ -1,0 +1,35 @@
+../testFile: (g=0): rw=randwrite, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=posixaio, iodepth=1
+fio-3.12
+Starting 1 process
+../testFile: Laying out IO file (1 file / 2048MiB)
+
+../testFile: (groupid=0, jobs=1): err= 0: pid=21505: Tue Jan 29 20:29:38 2019
+  write: IOPS=21.7k, BW=84.7MiB/s (88.8MB/s)(2048MiB/24193msec); 0 zone resets
+    slat (nsec): min=856, max=270068, avg=2573.62, stdev=915.84
+    clat (nsec): min=257, max=110800k, avg=42920.05, stdev=665859.95
+     lat (usec): min=8, max=110802, avg=45.49, stdev=665.98
+    clat percentiles (usec):
+     |  1.00th=[    9],  5.00th=[   10], 10.00th=[   10], 20.00th=[   10],
+     | 30.00th=[   11], 40.00th=[   11], 50.00th=[   11], 60.00th=[   11],
+     | 70.00th=[   12], 80.00th=[   12], 90.00th=[   13], 95.00th=[   14],
+     | 99.00th=[   40], 99.50th=[   49], 99.90th=[11994], 99.95th=[12780],
+     | 99.99th=[18482]
+   bw (  KiB/s): min=  232, max=308240, per=99.64%, avg=86367.77, stdev=75558.96, samples=48
+   iops        : min=   58, max=77060, avg=21591.94, stdev=18889.74, samples=48
+  lat (nsec)   : 500=0.01%
+  lat (usec)   : 10=25.91%, 20=71.66%, 50=2.02%, 100=0.12%, 250=0.01%
+  lat (usec)   : 500=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.16%, 20=0.12%, 50=0.01%
+  lat (msec)   : 100=0.01%, 250=0.01%
+  cpu          : usr=5.84%, sys=10.57%, ctx=524353, majf=0, minf=159
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,524288,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: bw=84.7MiB/s (88.8MB/s), 84.7MiB/s-84.7MiB/s (88.8MB/s-88.8MB/s), io=2048MiB (2147MB), run=24193-24193msec
+
+Disk stats (read/write):
+  sda: ios=0/480124, merge=0/20076, ticks=0/671264, in_queue=670676, util=30.22%

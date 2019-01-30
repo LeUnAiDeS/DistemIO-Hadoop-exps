@@ -1,0 +1,31 @@
+../testFile: (g=0): rw=randwrite, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=pvsync2, iodepth=1
+fio-3.12
+Starting 1 process
+../testFile: Laying out IO file (1 file / 1024MiB)
+
+../testFile: (groupid=0, jobs=1): err= 0: pid=36274: Tue Jan 29 21:49:36 2019
+  write: IOPS=24.2k, BW=94.5MiB/s (99.1MB/s)(1024MiB/10838msec); 0 zone resets
+    clat (usec): min=34, max=36706, avg=40.54, stdev=77.18
+     lat (usec): min=35, max=36706, avg=40.66, stdev=77.18
+    clat percentiles (nsec):
+     |  1.00th=[38144],  5.00th=[39168], 10.00th=[39168], 20.00th=[39168],
+     | 30.00th=[39680], 40.00th=[39680], 50.00th=[39680], 60.00th=[39680],
+     | 70.00th=[40192], 80.00th=[40704], 90.00th=[41216], 95.00th=[42240],
+     | 99.00th=[58112], 99.50th=[59136], 99.90th=[67072], 99.95th=[72192],
+     | 99.99th=[84480]
+   bw (  KiB/s): min=90104, max=98808, per=99.91%, avg=96657.52, stdev=2198.80, samples=21
+   iops        : min=22526, max=24702, avg=24164.38, stdev=549.70, samples=21
+  lat (usec)   : 50=98.46%, 100=1.54%, 250=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  cpu          : usr=2.97%, sys=22.87%, ctx=262152, majf=0, minf=10
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,262144,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: bw=94.5MiB/s (99.1MB/s), 94.5MiB/s-94.5MiB/s (99.1MB/s-99.1MB/s), io=1024MiB (1074MB), run=10838-10838msec
+
+Disk stats (read/write):
+  sda: ios=1/257322, merge=0/1250, ticks=0/7356, in_queue=7320, util=68.16%

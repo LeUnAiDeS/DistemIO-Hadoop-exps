@@ -1,0 +1,39 @@
+../testFile: (g=0): rw=randrw, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=pvsync2, iodepth=1
+fio-3.12
+Starting 1 process
+../testFile: Laying out IO file (1 file / 10MiB)
+
+../testFile: (groupid=0, jobs=1): err= 0: pid=14574: Tue Jan 29 19:32:57 2019
+  read: IOPS=8413, BW=32.9MiB/s (34.5MB/s)(5048KiB/150msec)
+    clat (usec): min=41, max=188, avg=111.36, stdev=22.89
+     lat (usec): min=41, max=189, avg=111.47, stdev=22.89
+    clat percentiles (usec):
+     |  1.00th=[   54],  5.00th=[   56], 10.00th=[   66], 20.00th=[  104],
+     | 30.00th=[  117], 40.00th=[  117], 50.00th=[  118], 60.00th=[  119],
+     | 70.00th=[  127], 80.00th=[  128], 90.00th=[  129], 95.00th=[  130],
+     | 99.00th=[  135], 99.50th=[  145], 99.90th=[  169], 99.95th=[  188],
+     | 99.99th=[  188]
+  write: IOPS=8653, BW=33.8MiB/s (35.4MB/s)(5192KiB/150msec); 0 zone resets
+    clat (nsec): min=3686, max=23132, avg=5004.67, stdev=1315.42
+     lat (nsec): min=3757, max=23382, avg=5150.83, stdev=1363.60
+    clat percentiles (nsec):
+     |  1.00th=[ 3760],  5.00th=[ 3824], 10.00th=[ 3856], 20.00th=[ 3920],
+     | 30.00th=[ 3952], 40.00th=[ 4080], 50.00th=[ 5280], 60.00th=[ 5344],
+     | 70.00th=[ 5408], 80.00th=[ 5536], 90.00th=[ 6176], 95.00th=[ 7200],
+     | 99.00th=[ 9408], 99.50th=[11456], 99.90th=[13248], 99.95th=[23168],
+     | 99.99th=[23168]
+  lat (usec)   : 4=17.42%, 10=32.93%, 20=0.31%, 50=0.23%, 100=6.76%
+  lat (usec)   : 250=42.34%
+  cpu          : usr=0.00%, sys=14.77%, ctx=1264, majf=0, minf=10
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=1262,1298,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=32.9MiB/s (34.5MB/s), 32.9MiB/s-32.9MiB/s (34.5MB/s-34.5MB/s), io=5048KiB (5169kB), run=150-150msec
+  WRITE: bw=33.8MiB/s (35.4MB/s), 33.8MiB/s-33.8MiB/s (35.4MB/s-35.4MB/s), io=5192KiB (5317kB), run=150-150msec
+
+Disk stats (read/write):
+  sda: ios=1066/0, merge=0/0, ticks=108/0, in_queue=108, util=47.16%
